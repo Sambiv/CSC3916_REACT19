@@ -38,13 +38,13 @@ const MovieDetail = () => {
         <Image src={selectedMovie.imageUrl} thumbnail />
       </Card.Body>
       <ListGroup variant="flush">
-        <ListGroupItem>{selectedMovie.title}</ListGroupItem>
-        <ListGroupItem>
+        <ListGroupItem className="bg-white text-dark">{selectedMovie.title}</ListGroupItem>
+        <ListGroupItem className="bg-white text-dark">
           {selectedMovie.actors.map((a,i)=>(
             <p key={i}><b>{a.actorName}</b> as {a.characterName}</p>
           ))}
         </ListGroupItem>
-        <ListGroupItem>
+        <ListGroupItem className="bg-white text-dark">
           <h4><BsStarFill /> {selectedMovie.avgRating?.toFixed(1) ?? 'N/A'}</h4>
         </ListGroupItem>
       </ListGroup>
